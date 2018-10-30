@@ -1,0 +1,86 @@
+// ==================================================================
+// TFM Base
+//
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@-ms-viewport { width: device-width; }
+
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: $st-primary-font;
+  font-size: $st-h0;
+  font-weight: $st-body-font-weight;
+  text-align: left;
+  // line-height: 1.4;
+  color: $st-light;
+  background-color: lighten($st-twilight, .05);
+  // background-color: #161517;
+  overflow-x: hidden;
+}
+
+[tabindex="-1"]:focus { outline: none !important;}
+
+p,
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+// ul { padding-right: 1rem; }
+li { padding-bottom:0.4rem; }
+
+ol li { padding-left: $st-gap / $st-gr / $st-gr; }
+
+hr { height: 5px; border: 0px solid; border-top-width: 1px; }
+
+a { text-decoration: none; }
+
+img { max-width: 100%; }
+
+// ==
+// Lists
+//
+
+ul {
+  list-style: none;
+  padding-left: $st-gap / $st-gr;
+}
+
+
+.st-list {
+  list-style: disc;
+}
+
+// .code-of-conduct .st-page-content ul {
+//   @extend .st-list;
+//   padding-left: $st-gap / $st-gr * $st-gr;
+// }
+
+// .research-topics .st-ty-item-name { font-weight: 600; cursor: pointer; }
+

@@ -1,0 +1,85 @@
+// ==================================================================
+// Global
+//
+
+// Set fonts 
+html,
+body,
+button                    { font-family: $st-primary-font; }
+
+body                      { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+// Set sizes
+.h0, p                    { font-size: $st-h0; @include media(">phone", "<=tablet") { font-size: $st-h0-s; }}  // 18px
+
+.h1, h1                   { font-size: $st-h1; @include media(">phone", "<=tablet") { font-size: $st-h1-s; }}  // 48px
+.h2, h2                   { font-size: $st-h2; @include media(">phone", "<=tablet") { font-size: $st-h3; }}  // 36px
+.h3, h3                   { font-size: $st-h3; @include media(">phone", "<=tablet") { font-size: $st-h4; }}  // 30px
+.h4, h4                   { font-size: $st-h4; @include media(">phone", "<=tablet") { font-size: $st-h5; }}  // 24px
+.h5, h5                   { font-size: $st-h5; }  // 21px
+.h6, h6                   { font-size: $st-h6; @include media(">phone", "<=tablet") { font-size: $st-h7; }  }  // 15px
+.h7                       { font-size: $st-h7; @include media(">phone", "<=tablet") { font-size: $st-h8; }  }  // 14px         
+.h8                       { font-size: $st-h8; }  // 12px         
+.h9                       { font-size: $st-h9; }  // 10px         
+
+// Set weight
+// Set line-height
+.h0, p                    { line-height: $st-gr; }
+.h1, h1                   { font-weight: $st-heading-font-weight; line-height: $st-line-height; }
+
+.h2,.h3,.h4,.h5,.h6,
+h2, h3, h4, h5, h6        { font-weight: $st-body-font-weight; line-height: $st-line-height; }
+
+// Set extra space 
+// h1                        { margin-bottom: $st-gap * $st-gr; @include media(">phone", "<=tablet") { margin-bottom: $st-gap; }}
+// h2, h3, h4, h5, h6        { margin-bottom: $st-gap; }
+p                         { margin-bottom: $st-gap; @include media(">phone", "<=tablet") { margin-bottom: $st-gap / $st-gr; } }
+
+p + h2, p + h3,
+ul + p, ul + h2, ul +h3   { margin-top: $st-gap * $st-gr; }
+
+// ==================================================================
+// Custom
+//
+
+.st-page-title {
+  color: $st-light;
+  font-size: $st-h3;
+  font-family: $st-secondary-font;
+  font-weight: $st-font-weight;
+  letter-spacing: 3px;
+  word-spacing: 6px;
+  text-transform: uppercase;
+  margin: 0 auto 3rem auto;
+}
+.ftm-footnotes ol         { font-size: $st-h6; }
+.ftm-footnotes p          { font-size: $st-h6; margin-bottom: 0.5rem;}
+
+a.footnote:before         { content: "["; }
+a.footnote:after          { content: "]"; }
+
+// Add extra gap after first h2. Then overwrite for specific pages.
+.st-page-content > h2:first-child { margin-bottom: $st-gap * $st-gr; @include media(">phone", "<=tablet") { margin-bottom: $st-gap; }}
+.code-of-conduct .st-page-content > h2:first-child { margin-bottom: $st-gap; }
+
+// ==================================================================
+// Layout / Slide
+//
+
+.st-pre-title {
+  text-transform: uppercase;
+  word-spacing: 2px;
+  font-size: $st-h0-s;
+  font-weight: $st-font-weight;
+  // color: darken($st-light, 68%);
+  // display: block;
+  // margin-top: 0.5rem;
+  // margin-bottom: -0.7rem;
+}
+
+.st-post-title {
+  font-size: $st-h6;
+  // font-weight: $st-font-weight;
+  color: $st-light;
+  margin: $st-gap / $st-gr 0;
+}

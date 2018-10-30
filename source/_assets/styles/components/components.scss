@@ -1,0 +1,105 @@
+// ==================================================================
+// TFM Components
+//
+
+// TFM Call to action button within st-page-content
+.st-cta {
+  // @extend .st-central;
+  // margin: $st-gap 0 $st-gap * $st-gr; 
+}
+
+// ==================================================================
+// TFM Divider (Animated)
+//
+
+.st-divider {
+  display: block;
+  max-width: 100%;
+  margin: 20px auto 20px;
+  height:1px;
+  background: rgba(255, 255, 255, 0.13);
+}
+
+// ==================================================================
+// ST Logomark
+//
+
+.st-logo {
+  @extend .st-central;
+  display: block;
+  margin: 15px auto 20px;
+  padding: 0;
+  border-bottom: 0;
+  display: block;
+  background: url(../images/shifttheory-logo.jpg) no-repeat center center;
+  background-size: contain;
+  // max-width: 100px;
+  height:72px;
+  img {
+    visibility: hidden;
+  }
+}
+
+// .st-logo {
+//   @extend .st-central;
+//   display:block;
+//   width: 90px;
+//   margin: 10px auto 0;
+// }
+
+// ==================================================================
+// Shift Theory menu icon
+//
+.st-menu-icon {
+  display: block;
+  position: absolute;
+  top:6px;
+  left:6px;
+  width: 40px;
+  height:40px;
+  // background: $st-twilight;
+  cursor: pointer;
+  padding: 13px 12px 14px 16px;
+  span {
+    display: block;
+    height: 1px;
+    background: darken($st-light, 50);
+    margin: 3px auto;
+  }
+  &:hover span{
+    background: $st-light;
+  }
+}
+
+// ==================================================================
+// TFM Logo + Page Meta
+//
+
+.st-page-meta {
+  @extend .st-central;
+  // margin-top: $st-gap*$st-gr*$st-gr;
+  // margin-top: 1rem;
+  &.invert {
+    a {
+      color: darken($st-light, 33%);
+      border-bottom: none;
+      &:hover {
+        color: $st-light;
+      }
+    }
+  }
+  span {
+    @extend .h7;
+    display:block;
+  }
+  hr {
+    margin-top: $st-gap;
+  }
+}
+
+.lexicon .st-page-content ul {
+  @extend .st-list-style-none;
+  p {
+    margin-left: $st-gap;
+  }
+}

@@ -1,0 +1,131 @@
+// ==================================================================
+// TFM Components - Buttons
+//
+
+// Hide :focus outline on Chrome
+button:focus { outline:0; }
+
+// button, .st-btn { @extend .st-btn-color; }
+
+// TFM Button
+// Using default color and size.
+button,
+.st-btn {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 10px 20px;
+  border-radius: 40px;
+  font-weight: $st-heading-font-weight;
+  line-height: $st-line-height;
+  border: 1px;
+  border-style: solid;
+  transition: all 0.12s ease-in-out;
+  margin: $st-gap 0 0;
+  width:100%;
+}
+
+// ==================================================================
+// TFM Button Sizes: Small, Medium, and Large.
+//
+.st-btn-s {
+  @extend .st-btn;
+  font-size: $st-h7;
+  padding: 10px 16px;
+  // border: 1px solid $st-primary-color;
+}
+
+.st-btn-l {
+  @extend .st-btn;
+  font-size: $st-h0;
+  padding: 13px 24px;
+  // border: 2px solid $st-primary-color;
+}
+
+// ==================================================================
+// TFM Button Colors
+//
+.st-btn-color {
+  color: desaturate(darken($st-light, 50), 10);
+  background: darken($st-twilight, 2);
+  border-color: desaturate(darken($st-light, 50), 10);
+  &:hover {
+    color: darken($st-light, 1);
+    border-color: darken($st-light, 1);
+  }
+}
+.st-btn-light {
+  color: $st-dark;
+  background: $st-light;
+  border-color: $st-light;
+}
+.st-btn-dark {
+  color: desaturate(darken($st-light, 50), 10);
+  background: darken($st-twilight, 2);
+  border-color: desaturate(darken($st-light, 50), 10);
+  &:hover {
+    color: darken($st-light, 1);
+    border-color: darken($st-light, 1);
+  }
+}
+
+.st-btn-success {
+  color: $st-primary-color;
+  background: $st-success;
+  border-color: $st-success;
+}
+
+.st-btn-alert {
+  color: $st-primary-color;
+  background: $st-alert;
+  border-color: $st-alert;
+}
+
+.st-btn-active {
+  color: darken($st-light, 1);
+  background: darken($st-twilight, 2);
+  border-color: darken($st-light, 1);
+  &:hover {
+    color: darken($st-light, 1);
+    border-color: darken($st-light, 1);
+  }
+}
+
+.st-btn-mute {
+  color: desaturate(darken($st-light, 50), 10);
+  background: darken($st-twilight, 2);
+  border-color: desaturate(darken($st-light, 50), 10);
+  cursor: not-allowed;
+  &:hover {
+    color: desaturate(darken($st-light, 50), 10);
+    background: darken($st-twilight, 2);
+    border-color: desaturate(darken($st-light, 50), 10);
+  }
+}
+
+
+// ==================================================================
+// TFM Button custom styles
+//
+button.st-btn-mute, .st-btn.st-btn-mute { cursor: not-allowed; }
+
+.st-btn-group {
+  @extend .st-central;
+    max-width:66%;
+  @include media(">phone", "<=tablet") {
+    max-width:90%;
+  }  // 48px
+  a {
+    @extend .h6;
+    font-family: $st-secondary-font;
+    font-weight: 800;
+    margin-top: 0;
+    width: 44%;
+    margin:0 0.1rem;
+  }
+}

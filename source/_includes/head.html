@@ -1,0 +1,17 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ site.title | escape }} | {{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta property="og:title" content="Color App – Let's Color the World Together!" />
+  <meta property="og:url" content="https://color.shifttheory.com/" />
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:image" content="https://raw.githubusercontent.com/shifttheory/com/master/docs/assets/images/shifttheory-logo.png">
+  <meta name="author" content="Color App by Shift Theory" />
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/styles/main.css">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+  {% include favicons.html %}
+  {% include analytics.html %}
+</head>

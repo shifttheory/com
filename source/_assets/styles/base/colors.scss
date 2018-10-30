@@ -1,0 +1,23 @@
+// ==================================================================
+// TFM Base Colors
+//
+// More color variables can be viewed in variables/variables.css
+//
+
+h1            { color: $st-light; }
+.salute h1    { color: $st-dark; }
+
+a {
+	color: desaturate(darken($st-light, 33), 10);
+	transition: color 0.2s ease;
+	// border-bottom: 0.5px solid darken($st-light, 66%);
+	&:hover {
+		color: $st-light;
+		// border-color: $st-light;
+	}
+}
+a:hover       { color: $st-light; }
+
+hr            { border-color: darken($st-light, 30%); }
+
+a.st-btn:hover     { color: $st-light; }

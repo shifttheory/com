@@ -1,0 +1,43 @@
+// ==================================================================
+// TFM Layouts / Page
+//
+
+
+// ==================================================================
+// Page 666px
+//
+
+.st-page {
+  padding: 0 2rem;
+  max-width: 666px;
+  margin: 0 auto;
+}
+
+.st-page-header {
+  text-align: center;
+}
+
+// ==================================================================
+// Page 100%
+//
+
+.st-page-full {
+  @extend .st-page;
+  max-width: 80%;
+  @include media(">phone", "<=tablet") {
+    max-width: 100%; 
+  }
+}
+
+// ==================================================================
+// Page Grid
+//
+
+.st-page-grid {
+  @extend .st-flex;
+  a {
+    @extend .st-flex-item;
+    width: 360px;
+    margin: 2px
+  }
+}

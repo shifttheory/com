@@ -1,0 +1,58 @@
+// ==================================================================
+// TFM: Utilities
+//
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+// .st-center {text-align: center}
+
+// Apply @extend to the parent element
+.st-valign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // Add these two lines after @extend... then adjust vh
+  // min-height: 33%;  /* Fallback for browsers do NOT support vh unit */
+  // min-height: 33vh; /* These two lines are counted as one :-)       */
+}
+
+.st-list-style-none {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Center horizontly
+.st-central {
+  // display: block;
+  // width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+// Aligner 
+// Source: https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-item {
+  max-width: 50%;
+}
+
+.flex-item--top {
+  align-self: flex-start;
+}
+
+.flex-item--bottom {
+  align-self: flex-end;
+}

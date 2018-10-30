@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {% include head.html %}
+  <body {% if page.body_class %}class="{{ page.body_class }}"{% endif %}>
+    {% include preload.html %}
+    <div id="st-app">
+      <main class="st-content" aria-label="Content">
+        <div class="st-content-inner">
+          {{ content }}
+        </div>
+      </main>
+    </div>
+    <div class="results"></div> 
+    {% include scripts.html %}
+  </body>
+</html>
