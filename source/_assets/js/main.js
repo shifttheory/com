@@ -47,7 +47,7 @@ var appSwiper = new Swiper ('.swiper-container', {
   // Optional parameters
   direction: 'horizontal',
   loop: false,
-  initialSlide: 1,
+  initialSlide: 0,
   spaceBetween: 300,
   navigation: {
     nextEl: '.st-cp-btn-next',
